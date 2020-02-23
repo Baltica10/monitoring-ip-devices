@@ -19,10 +19,11 @@ import java.util.stream.Collectors;
 @Slf4j
 @Component
 public class MfuCountPageJob {
+    public Integer pageCounter;
 
     final MfuCounterPageReportDao mfuCounterPageReportDao;
     final DeviceDao deviceDao;
-    public Integer pageCounter;
+
 
     public MfuCountPageJob(MfuCounterPageReportDao mfuCounterPageReportDao, DeviceDao deviceDao) {
         this.mfuCounterPageReportDao = mfuCounterPageReportDao;
