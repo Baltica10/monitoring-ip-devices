@@ -24,7 +24,5 @@ public class DeviceSettings {
 
     private String dns;
 
-    @OneToOne
-    private Device device;
-
+    private String urlPageCount;
 }

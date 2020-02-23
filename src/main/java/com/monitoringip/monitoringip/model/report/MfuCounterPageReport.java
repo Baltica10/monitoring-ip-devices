@@ -22,7 +22,6 @@ public class MfuCounterPageReport {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
     private Integer pageCounter;
 
     @NotNull
