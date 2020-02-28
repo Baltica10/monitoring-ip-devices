@@ -54,8 +54,11 @@ public class MfuCountPageJob {
     private Integer findCounter(Device device) {
 
         try {
-            File htmlFile = new File(device.getDeviceSettings().getUrlPageCount());
-            Document doc = Jsoup.parse(htmlFile, "UTF-8");
+//            File htmlFile = new File(device.getDeviceSettings().getUrlPageCount());
+//            Document doc = Jsoup.parse(htmlFile, "UTF-8");
+            String urlPageCount = device.getDeviceSettings().getUrlPageCount();
+            String ipDevice ="http://"+device.getDeviceSettings().getIpAdr();
+            Document doc = Jsoup.connect(ipDevice+urlPageCount).get();
 
             Elements rows = doc.select("tr");
             rows.forEach(element -> {
