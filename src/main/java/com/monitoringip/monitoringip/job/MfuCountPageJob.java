@@ -4,6 +4,7 @@ import com.monitoringip.monitoringip.model.device.Device;
 import com.monitoringip.monitoringip.model.report.MfuCounterPageReport;
 import com.monitoringip.monitoringip.repository.DeviceDao;
 import com.monitoringip.monitoringip.repository.MfuCounterPageReportDao;
+import com.monitoringip.monitoringip.service.mail.MailSender;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -20,12 +21,14 @@ import java.util.stream.Collectors;
 public class MfuCountPageJob {
     public Integer pageCounter;
 
-    final MfuCounterPageReportDao mfuCounterPageReportDao;
-    final DeviceDao deviceDao;
+    private final MfuCounterPageReportDao mfuCounterPageReportDao;
+    private final DeviceDao deviceDao;
+    private final MailSender mailSender;
 
-    public MfuCountPageJob(MfuCounterPageReportDao mfuCounterPageReportDao, DeviceDao deviceDao) {
+    public MfuCountPageJob(MfuCounterPageReportDao mfuCounterPageReportDao, DeviceDao deviceDao, MailSender mailSender) {
         this.mfuCounterPageReportDao = mfuCounterPageReportDao;
         this.deviceDao = deviceDao;
+        this.mailSender = mailSender;
     }
 
     @Scheduled(cron = "${mfu.counter-page.cron}")
