@@ -96,6 +96,23 @@
         </dependency>
     </dependencies>
 
+<profiles>
+    <profile>
+        <id>dev-h2</id>
+        <properties>
+            <build.profile.id>dev-h2</build.profile.id>
+            <spring.profiles.active>dev-h2</spring.profiles.active>
+        </properties>
+    </profile>
+    <profile>
+        <id>dev-postgree</id>
+        <properties>
+            <build.profile.id>dev-postgree</build.profile.id>
+            <spring.profiles.active>dev-postgree</spring.profiles.active>
+        </properties>
+    </profile>
+</profiles>
+
     <build>
         <plugins>
             <plugin>
