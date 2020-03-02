@@ -11,7 +11,6 @@ import org.jsoup.select.Elements;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import java.io.File;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,7 +22,6 @@ public class MfuCountPageJob {
 
     final MfuCounterPageReportDao mfuCounterPageReportDao;
     final DeviceDao deviceDao;
-
 
     public MfuCountPageJob(MfuCounterPageReportDao mfuCounterPageReportDao, DeviceDao deviceDao) {
         this.mfuCounterPageReportDao = mfuCounterPageReportDao;
@@ -54,8 +52,6 @@ public class MfuCountPageJob {
     private Integer findCounter(Device device) {
 
         try {
-//            File htmlFile = new File(device.getDeviceSettings().getUrlPageCount());
-//            Document doc = Jsoup.parse(htmlFile, "UTF-8");
             String urlPageCount = device.getDeviceSettings().getUrlPageCount();
             String ipDevice ="http://"+device.getDeviceSettings().getIpAdr();
             Document doc = Jsoup.connect(ipDevice+urlPageCount).get();
@@ -63,7 +59,7 @@ public class MfuCountPageJob {
             Elements rows = doc.select("tr");
             rows.forEach(element -> {
                 Elements tds = element.select("td");
-                if (tds.get(0).text().equals("Всего оттисков:")) {
+                if (tds.get(0).text().equals(device.getDeviceSettings().getFindPatternPageCount())) {
                     pageCounter = Integer.valueOf(tds.get(1).text());
                 }
             });

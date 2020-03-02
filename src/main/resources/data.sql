@@ -2,26 +2,26 @@ INSERT INTO device_type (type, description) VALUES ('MFU', 'МФУ');
 INSERT INTO device_type (type, description) VALUES ('CAM', 'IP камера');
 INSERT INTO device_type (type, description) VALUES ('TEL', 'IP телефон');
 
-INSERT INTO device_settings(dns, gateway, ip_adr, mask, url_page_count)
-VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.20', '255.255.255.0', '/info_configuration.html?tab=Status&menu=DevConfig');
-INSERT INTO device_settings(dns, gateway, ip_adr, mask, url_page_count)
-VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.21', '255.255.255.0', '/info_configuration.html?tab=Status&menu=DevConfig');
-INSERT INTO device_settings(dns, gateway, ip_adr, mask, url_page_count)
-VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.22', '255.255.255.0', '/info_configuration.html?tab=Status&menu=DevConfig');
-INSERT INTO device_settings(dns, gateway, ip_adr, mask, url_page_count)
-VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.23', '255.255.255.0', '/info_configuration.html?tab=Status&menu=DevConfig');
-INSERT INTO device_settings(dns, gateway, ip_adr, mask, url_page_count)
-VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.24', '255.255.255.0', '/info_configuration.html?tab=Status&menu=DevConfig');
-INSERT INTO device_settings(dns, gateway, ip_adr, mask, url_page_count)
-VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.25', '255.255.255.0', '/info_configuration.html?tab=Status&menu=DevConfig');
-INSERT INTO device_settings(dns, gateway, ip_adr, mask, url_page_count)
-VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.28', '255.255.255.0', '/info_configuration.html?tab=Status&menu=DevConfig');
-INSERT INTO device_settings(dns, gateway, ip_adr, mask, url_page_count)
-VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.27', '255.255.255.0', '/info_configuration.html?tab=Status&menu=DevConfig');
-INSERT INTO device_settings(dns, gateway, ip_adr, mask, url_page_count)
-VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.29', '255.255.255.0', '/info_configuration.html?tab=Status&menu=DevConfig');
-INSERT INTO device_settings(dns, gateway, ip_adr, mask, url_page_count)
-VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.30', '255.255.255.0', '/info_configuration.html?tab=Status&menu=DevConfig');
+INSERT INTO device_settings(dns, gateway, ip_adr, mask, find_pattern_page_count, url_page_count)
+VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.20', '255.255.255.0', 'Всего оттисков:', '/info_configuration.html?tab=Status&menu=DevConfig');
+INSERT INTO device_settings(dns, gateway, ip_adr, mask, find_pattern_page_count, url_page_count)
+VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.21', '255.255.255.0', 'Всего оттисков:', '/info_configuration.html?tab=Status&menu=DevConfig');
+INSERT INTO device_settings(dns, gateway, ip_adr, mask, find_pattern_page_count, url_page_count)
+VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.22', '255.255.255.0', 'Всего оттисков:', '/info_configuration.html?tab=Status&menu=DevConfig');
+INSERT INTO device_settings(dns, gateway, ip_adr, mask, find_pattern_page_count, url_page_count)
+VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.23', '255.255.255.0', 'Всего оттисков:', '/info_configuration.html?tab=Status&menu=DevConfig');
+INSERT INTO device_settings(dns, gateway, ip_adr, mask, find_pattern_page_count, url_page_count)
+VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.24', '255.255.255.0', 'Всего оттисков:', '/info_configuration.html?tab=Status&menu=DevConfig');
+INSERT INTO device_settings(dns, gateway, ip_adr, mask, find_pattern_page_count, url_page_count)
+VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.25', '255.255.255.0', 'Всего оттисков:', '/info_configuration.html?tab=Status&menu=DevConfig');
+INSERT INTO device_settings(dns, gateway, ip_adr, mask, find_pattern_page_count, url_page_count)
+VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.28', '255.255.255.0', 'Всего оттисков:', '/info_configuration.html?tab=Status&menu=DevConfig');
+INSERT INTO device_settings(dns, gateway, ip_adr, mask, find_pattern_page_count, url_page_count)
+VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.27', '255.255.255.0', 'Всего оттисков:', '/info_configuration.html?tab=Status&menu=DevConfig');
+INSERT INTO device_settings(dns, gateway, ip_adr, mask, find_pattern_page_count, url_page_count)
+VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.29', '255.255.255.0', 'Всего отпечатков:', '/info_configuration.html?tab=Status&menu=DevConfig');
+INSERT INTO device_settings(dns, gateway, ip_adr, mask, find_pattern_page_count, url_page_count)
+VALUES ('192.168.1.7', '192.168.1.251', '192.168.1.30', '255.255.255.0', 'Всего отпечатков:', '/SSI/info_configuration.htm');
 
 
 

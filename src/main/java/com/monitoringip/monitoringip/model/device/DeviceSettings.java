@@ -25,4 +25,6 @@ public class DeviceSettings {
     private String dns;
 
     private String urlPageCount;
+
+    private String findPatternPageCount;
 }
